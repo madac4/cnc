@@ -356,6 +356,9 @@ section {
     }
     &:hover {
         transform: scale(1.1);
+        background-color: #DB0000;
+        border-color: #DB0000;
+        color: #fff;
     }
     i {
         font-size: 24px;

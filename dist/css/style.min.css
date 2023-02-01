@@ -816,6 +816,9 @@ section {
 }
 .slider-arrow--small:hover {
   transform: scale(1.1);
+  background-color: #DB0000;
+  border-color: #DB0000;
+  color: #fff;
 }
 .slider-arrow--small i {
   font-size: 24px;
