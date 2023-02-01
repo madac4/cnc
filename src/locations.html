@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Locations'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                @@include('./components/page-header.html', {'title': 'Locations', 'subtitle': '', 'text': 'Earum veritatis est quidem consequatur est eveniet. Est quisquam et impedit. Ipsam fugit modi nemo.', 'background': '@img/introduction-locations.jpg'} )
+                
+                <section class="locations">
+                    <div class="locations__container">
+                        <div class="locations__body grid grid-3 gap-2">
+                            <div class="location" style=" background: url('@img/location1.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location2.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location3.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location4.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location5.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location1.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location2.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location3.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                            <div class="location" style=" background: url('@img/location4.jpg') 50% 50% / contain no-repeat; " >
+                                <p>Aut excepturi dolorum officiis</p>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <ul class="pagination__list pagination-list">
+                                <li class="pagination-list__item prev">
+                                    <a href="#" class="icon-chevron__left"></a>
+                                </li>
+                                <li class="pagination-list__item">
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="pagination-list__item"><a href="#">2</a></li>
+                                <li class="pagination-list__item"><a href="#">3</a></li>
+                                <li class="pagination-list__item next">
+                                    <a href="#" class="icon-chevron__right"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Films'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                @@include('./components/page-header.html', {'title': 'Talents', 'subtitle': '', 'text': 'Earum veritatis est quidem consequatur est eveniet. Est quisquam et impedit. Ipsam fugit modi nemo.', 'background': '@img/introduction-talents.jpg'} )
+                
+                <section class="talents">
+                    <div class="talents__container">
+                        <div class="talents__body grid grid-4 gap-2">
+                            <div class="person" style=" background: url('@img/talent1.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Daniela Burlaca, 30 ani</p>
+                                    <p>Fondatoarea Teatrului „Geneza Art”</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent2.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Nathan Jerde</p>
+                                    <p>Lead Identity Executive</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent3.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Melissa Cormier</p>
+                                    <p>District Division Analyst</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent4.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Mr. Eva Nitzsche</p>
+                                    <p>Central Creative Analyst</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent5.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Christopher Rosenbaum</p>
+                                    <p>Central Creative Director</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent6.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Kari Kling</p>
+                                    <p>Investor Identity Manager</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent1.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Daniela Burlaca, 30 ani</p>
+                                    <p>Fondatoarea Teatrului „Geneza Art”</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent2.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Nathan Jerde</p>
+                                    <p>Lead Identity Executive</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent3.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Melissa Cormier</p>
+                                    <p>District Division Analyst</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent4.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Mr. Eva Nitzsche</p>
+                                    <p>Central Creative Analyst</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent5.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Christopher Rosenbaum</p>
+                                    <p>Central Creative Director</p>
+                                </div>
+                            </div>
+                            <div class="person" style=" background: url('@img/talent6.jpg') 50% 50% / contain no-repeat; " >
+                                <div class="person__content person-content">
+                                    <p>Kari Kling</p>
+                                    <p>Investor Identity Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <ul class="pagination__list pagination-list">
+                                <li class="pagination-list__item prev">
+                                    <a href="#" class="icon-chevron__left"></a>
+                                </li>
+                                <li class="pagination-list__item">
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="pagination-list__item"><a href="#">2</a></li>
+                                <li class="pagination-list__item"><a href="#">3</a></li>
+                                <li class="pagination-list__item next">
+                                    <a href="#" class="icon-chevron__right"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

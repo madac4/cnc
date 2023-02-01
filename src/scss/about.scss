@@ -1,0 +1,80 @@
+.contacts{
+    @include adaptiv-value('padding-top', 180, 100, 1);
+    @include adaptiv-value('padding-bottom', 120, 80, 1);
+    &-body{
+        grid-template-columns: 1fr auto;
+        @include adaptiv-value('grid-gap', 100, 0, 1);
+        @media (max-width: 1200px) {
+            grid-gap: 30px;
+        }
+        @media (max-width: $tablet) {
+            grid-gap: 40px;
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+        .map-tablet{
+            grid-column: 2 span;
+            width: 100%;
+            @include adaptiv-value('height', 460, 300, 1);
+            @media (max-width: $mobileSmall) {
+                grid-column: 1 span;
+            }
+        }
+        &__sidebar{
+            width: fit-content;
+            h5{
+                color: #fff;
+                @include adaptiv-value('margin-bottom', 30, 15, 1);
+                &:not(:first-child){
+                    @include adaptiv-value('margin-top', 50, 25, 1);
+                }
+            }
+            a{
+                display: block;
+                color: #fff;
+                @include adaptiv-value('margin-bottom', 20, 10, 1);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-main{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        iframe{
+            min-width: 530px;
+            @include adaptiv-value('min-width', 530, 300, 1);
+            @include adaptiv-value('height', 600, 380, 1);
+        }
+        &__form{
+            color: #fff;
+            width: 100%;
+            h5{
+                margin-bottom: 10px;
+            }
+            form{
+                @include adaptiv-value('margin-top', 50, 20, 1);
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .desktop{
+        display: block;
+    }
+    .tablet{
+        display: none;
+    }
+}
+@media (max-width: $tablet) {
+    .tablet{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}

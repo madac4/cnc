@@ -1,0 +1,24 @@
+.page-introduction {
+    @include adaptiv-value('height', 500, 400, 1);
+    margin-bottom: 20px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        flex-direction: column;
+        p,
+        h5 {
+            margin-top: 20px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

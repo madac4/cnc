@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Films'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                @@include('./components/page-header.html', {'title': 'Cash Rebate', 'subtitle': '', 'text': 'Sit cumque quaerat quis consectetur voluptatem. Repellat velit dolor. Voluptatum deleniti optio molestiae. Consequatur adipisci veritatis neque dicta rerum ex ipsam eos. Aspernatur et assumenda assumenda ab dolores est.', 'background': '@img/introduction-image1.jpg'} )
+                
+                <div class="apply">
+                    <div class="apply__container">
+                        <div class="apply__item apply-item">
+                            <h2><i class="icon-people"></i>Cine poate aplica ?</h2>
+                            <div class="apply-item__body">
+                                <div class="apply-item__illustration">
+                                    <img src="@img/illustration.svg" alt="">
+                                </div>
+                                <div class="apply-item__content apply-content">
+                                    Producătorii care:
+                                    <div class="apply-content__blocks">
+                                        <div class="block">
+                                            Sunt înregistrați în Republica Moldova.
+                                        </div>
+                                        <div class="block">
+                                            Au un contract de colaborare cu un producător străin.
+                                        </div>
+                                        <div class="block">
+                                            Au o experiență de minimum 3 ani în domeniul producției.
+                                        </div>
+                                        <div class="block">
+                                            Au acumulat un punctaj minim la Testul Cultural.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apply__item apply-item">
+                            <div class="apply-item__body">
+                                <div class="apply-item__illustration">
+                                    <img src="@img/illustration2.svg" alt="">
+                                </div>
+                                <div class="apply-item__content apply-content">
+                                    <h2><i class="icon-calendar"></i>Când să aplici ?</h2>
+                                    <div class="apply-content__blocks">
+                                        <div class="block">
+                                            Dosarul de beneficiar poate fi depus pe tot parcursul anului.
+                                        </div>
+                                        <div class="block">
+                                            Se depune înainte de începerea producției cu minim 25 de zile lucrătoare
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apply__item apply-item">
+                            <div class="apply-item__body">
+                                <div class="apply-item__illustration">
+                                    <img src="@img/illustration3.svg" alt="">
+                                </div>
+                                <div class="apply-item__content apply-content">
+                                    <h2><i class="icon-monetization"></i>Val. suportului financiar ?</h2>
+                                    <div class="apply-content__blocks">
+                                        <div class="block">
+                                            25% - din totalul cheltuielilor eligibile efectuate pe teritoriul Republicii Moldova
+                                        </div>
+                                        <div class="block">
+                                            + 5% - cu condiția promovării tematice a zonei geografice, a localității sau a RM în cadrul filmului.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+
+.pagination {
+    padding: 0 15px;
+    @include adaptiv-value('margin-top', 30, 15, 1);
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        &__item {
+            span.current {
+                background-color: #DB0000;
+                color: #fff;
+                border: 1px solid #DB0000;
+            }
+            &:hover {
+                a,
+                span {
+                    background-color: #DB0000;
+                    color: #fff;
+                }
+            }
+            .prev,
+            .next {
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include adaptiv-value('width', 44, 38, 1);
+                    @include adaptiv-value('height', 44, 38, 1);
+                    font-size: 24px;
+                    &:hover {
+                        border-color: #DB0000;
+                    }
+                }
+            }
+            a.next,
+            a.prev {
+                border: none;
+            }
+            a,
+            span {
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                justify-content: center;
+                background: #fff;
+                border: red;
+                transition: 0.3s;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                color: #2C2C30;
+                @include adaptiv-value('width', 44, 38, 1);
+                @include adaptiv-value('height', 44, 38, 1);
+            }
+        }
+    }
+}

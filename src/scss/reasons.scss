@@ -1,0 +1,93 @@
+.reasons-introduction{
+    @include adaptiv-value('padding-top', 180, 80, 1);
+    @include adaptiv-value('padding-bottom', 100, 50, 1);
+    @include adaptiv-value('margin-bottom', 100, 60, 1);
+    &__body{
+        .reason{
+            width: 100%;
+            border: 1px solid #222222;
+            &:hover{
+                border: 1px solid #959595;
+                background-color: transparent;
+                color: #8CC4FF;
+                p{color: #FFFFFF;}
+            }
+        }
+    }
+}
+.main-resons{
+    .page__reasons-slider {
+        .reasons-slider__body {
+            .reasons-slider__slider {
+                display: flex;
+                flex-direction: row-reverse;
+                @include adaptiv-value('gap', 100, 10, 1);
+                @media (max-width: $mobile) {
+                    display: block;
+                }
+                .slider-reasons__body {
+                    .slider-reasons__slide {
+                        background-color: #fff;
+                        h2{
+                            margin-bottom: 20px;
+                            &:not(:first-child){
+                                @include adaptiv-value('margin-top', 50, 20, 1);
+                            }
+                        }
+                        p{
+                            color: $maincolor;
+                            margin-bottom: 20px;
+                        }
+                        img{
+                            display: block;
+                            margin: 30px 0;
+                        }
+                        a{
+                            color: $maincolor;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .slider-reasons-controls {
+                    &__dots {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        @include adaptiv-value('gap', 100, 40, 1);
+                        @media (max-width: $mobile) {
+                            position: fixed;
+                            background-color: #fff;
+                            width: 100%;
+                            left: 0;
+                            right: 0;
+                            height: fit-content;
+                            justify-content: center;
+                            padding: 0 10px;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            z-index: 2;
+                            gap: 20px;
+                        }
+                        .swiper-pagination-bullet {
+                            color: #72747D;
+                            opacity: 1;
+                            background-color: transparent;
+                            text-transform: uppercase;
+                            width: 100%;
+                            @media (max-width: $mobile) {
+                                display: inline-block;
+                                padding: 5px 0;
+                                font-size: 16px;
+                                width: fit-content;
+                                height: fit-content;
+                            }
+                            &-active {
+                                color: #121212;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
