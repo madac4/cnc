@@ -51,7 +51,7 @@
                 .slider-reasons-controls {
                     &__dots {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         flex-direction: column;
                         @include adaptiv-value('gap', 100, 40, 1);
                         @media (max-width: $mobile) {
@@ -73,7 +73,30 @@
                             opacity: 1;
                             background-color: transparent;
                             text-transform: uppercase;
-                            width: 100%;
+                            width: fit-content;
+                            transition: .3s;
+                            position: relative;
+                            display: flex;
+                            align-items: flex-end;
+                            @media (min-width: $mobile) {
+                                &:hover{
+                                    transform: translateX(20px);
+                                    color: $maincolor;
+                                    &::after{
+                                        width: 100%;
+                                    }
+                                }
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    transition: .5s;
+                                    width: 0;
+                                    bottom: 15px;
+                                    height: 4px;
+                                    background-color: $maincolor;
+                                    left: 0;
+                                }
+                            }
                             @media (max-width: $mobile) {
                                 display: inline-block;
                                 padding: 5px 0;

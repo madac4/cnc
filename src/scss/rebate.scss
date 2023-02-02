@@ -64,3 +64,85 @@
         }
     }
 }
+
+.information{
+    &-body{
+        &__part{
+            h2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                @include adaptiv-value('margin-bottom', 30, 20, 1);
+                gap: 10px;
+                i{
+                    @include adaptiv-value('font-size', 40, 24, 1);
+                }
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                li{
+                    border: 1px solid #FFFFFF;
+                    height: 68px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: #fff;
+                    background-color: $bgdark2;
+                    transition: .3s;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #fff;
+                        color: $maincolor;
+                    }
+                }
+            }
+            &--bw{
+                ul{
+                    li{
+                        color: $maincolor;
+                        background-color: #fff;
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        span{
+                            background-color: $bgdark;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 100%;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apply-info{
+    &__body{
+        p{
+            color: $maincolor;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            tr{
+                td{
+                    border: 1px solid #E8EAF1;
+                    text-align: center;
+                    padding: 20px ;
+                    strong{
+                        @include adaptiv-value('font-size', 20, 18, 1);
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
