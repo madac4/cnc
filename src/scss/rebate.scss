@@ -67,6 +67,9 @@
 
 .information{
     &-body{
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
         &__part{
             h2{
                 display: flex;
@@ -94,6 +97,7 @@
                     background-color: $bgdark2;
                     transition: .3s;
                     cursor: pointer;
+                    padding: 10px 0;
                     &:hover{
                         background-color: #fff;
                         color: $maincolor;
@@ -107,6 +111,7 @@
                         background-color: #fff;
                         display: grid;
                         grid-template-columns: repeat(2,1fr);
+                        padding: 0;
                         span{
                             background-color: $bgdark;
                             display: flex;
@@ -128,9 +133,22 @@
         p{
             color: $maincolor;
         }
+        .apply-body__table{
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
         table{
             width: 100%;
             border-collapse: collapse;
+            @media (max-width: $mobile) {
+               min-width: 900px;
+            //    overflow-x: auto;      
+            }
             tr{
                 td{
                     border: 1px solid #E8EAF1;

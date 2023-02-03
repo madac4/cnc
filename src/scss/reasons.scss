@@ -23,9 +23,10 @@
                 flex-direction: row-reverse;
                 @include adaptiv-value('gap', 100, 10, 1);
                 @media (max-width: $mobile) {
-                    display: block;
+                    flex-direction: column-reverse;
                 }
                 .slider-reasons__body {
+                    max-width: 100%;
                     .slider-reasons__slide {
                         background-color: #fff;
                         h2{
@@ -54,12 +55,13 @@
                         align-items: flex-start;
                         flex-direction: column;
                         @include adaptiv-value('gap', 100, 40, 1);
+                        margin-top: 80px;
                         @media (max-width: $mobile) {
-                            position: fixed;
                             background-color: #fff;
                             width: 100%;
                             left: 0;
                             right: 0;
+                            margin-top: 0;
                             height: fit-content;
                             justify-content: center;
                             padding: 0 10px;

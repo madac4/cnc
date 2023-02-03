@@ -214,6 +214,7 @@ body.white-body {
 body.lock {
   overflow: hidden;
   touch-action: none;
+  -ms-touch-action: none;
 }
 
 aside,
@@ -671,7 +672,7 @@ section.reverse [class*=__header] a {
 }
 
 .grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .grid-4 {
@@ -856,6 +857,7 @@ section.reverse [class*=__header] a {
 
 .slider-arrows--simple .slider-arrow {
   position: absolute;
+  color: #2c2c30;
   top: 50%;
   transform: translateY(-50%);
   padding: 15px;
@@ -875,8 +877,22 @@ section.reverse [class*=__header] a {
 .slider-arrows--simple .slider-arrow__prev {
   left: 20px;
 }
+@media (max-width: 1300px) {
+  .slider-arrows--simple .slider-arrow__prev {
+    left: calc(
+                10px + 10 * ((100vw - 320px) / 980)
+            );
+  }
+}
 .slider-arrows--simple .slider-arrow__next {
   right: 20px;
+}
+@media (max-width: 1300px) {
+  .slider-arrows--simple .slider-arrow__next {
+    right: calc(
+                10px + 10 * ((100vw - 320px) / 980)
+            );
+  }
 }
 .slider-arrows--simple .slider-arrow.swiper-button-disabled {
   background: rgba(255, 255, 255, 0.3);
@@ -1278,6 +1294,11 @@ textarea {
   }
 }
 @media (max-width: 47.99875rem) {
+  .modal .icon-close {
+    top: 50px;
+  }
+}
+@media (max-width: 47.99875rem) {
   .modal {
     width: 100%;
     height: 100vh;
@@ -1345,6 +1366,9 @@ textarea {
 .footer__container {
   padding: 30px 15px;
 }
+.footer a, .footer p {
+  color: #fff;
+}
 .footer-nav {
   margin-bottom: 30px;
 }
@@ -1398,9 +1422,6 @@ textarea {
   color: #fff;
   text-align: center;
   padding: 15px 0;
-}
-.footer__copyright a {
-  color: #fff;
 }
 
 @media (max-width: 61.99875rem) {
@@ -1819,8 +1840,6 @@ textarea {
 }
 
 .talent-modal {
-  max-width: 1120px;
-  margin: 0 auto;
   width: 100%;
 }
 .talent-modal__body {
@@ -1917,7 +1936,7 @@ textarea {
 @media (max-width: 1300px) {
   .location-modal__body {
     padding-top: calc(
-                60px + 60 * ((100vw - 320px) / 980)
+                80px + 40 * ((100vw - 320px) / 980)
             );
   }
 }
@@ -2132,8 +2151,11 @@ textarea {
 }
 @media (max-width: 47.99875rem) {
   .main-resons .page__reasons-slider .reasons-slider__body .reasons-slider__slider {
-    display: block;
+    flex-direction: column-reverse;
   }
+}
+.main-resons .page__reasons-slider .reasons-slider__body .reasons-slider__slider .slider-reasons__body {
+  max-width: 100%;
 }
 .main-resons .page__reasons-slider .reasons-slider__body .reasons-slider__slider .slider-reasons__body .slider-reasons__slide {
   background-color: #fff;
@@ -2168,6 +2190,7 @@ textarea {
   align-items: flex-start;
   flex-direction: column;
   gap: 100px;
+  margin-top: 80px;
 }
 @media (max-width: 1300px) {
   .main-resons .page__reasons-slider .reasons-slider__body .reasons-slider__slider .slider-reasons-controls__dots {
@@ -2178,11 +2201,11 @@ textarea {
 }
 @media (max-width: 47.99875rem) {
   .main-resons .page__reasons-slider .reasons-slider__body .reasons-slider__slider .slider-reasons-controls__dots {
-    position: fixed;
     background-color: #fff;
     width: 100%;
     left: 0;
     right: 0;
+    margin-top: 0;
     height: fit-content;
     justify-content: center;
     padding: 0 10px;
@@ -2541,6 +2564,11 @@ textarea {
   }
 }
 
+@media (max-width: 47.99875rem) {
+  .information-body {
+    grid-template-columns: 1fr;
+  }
+}
 .information-body__part h2 {
   display: flex;
   align-items: center;
@@ -2582,6 +2610,7 @@ textarea {
   background-color: #242424;
   transition: 0.3s;
   cursor: pointer;
+  padding: 10px 0;
 }
 .information-body__part ul li:hover {
   background-color: #fff;
@@ -2592,6 +2621,7 @@ textarea {
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 0;
 }
 .information-body__part--bw ul li span {
   background-color: #121212;
@@ -2606,9 +2636,23 @@ textarea {
 .apply-info__body p {
   color: #2c2c30;
 }
+.apply-info__body .apply-body__table {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.apply-info__body .apply-body__table::-webkit-scrollbar {
+  display: none;
+}
 .apply-info__body table {
   width: 100%;
   border-collapse: collapse;
+}
+@media (max-width: 47.99875rem) {
+  .apply-info__body table {
+    min-width: 900px;
+  }
 }
 .apply-info__body table tr td {
   border: 1px solid #E8EAF1;

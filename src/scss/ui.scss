@@ -253,7 +253,7 @@ section {
 }
 
 .grid-3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .grid-4 {
@@ -369,6 +369,7 @@ section {
 .slider-arrows--simple{
     .slider-arrow{
         position: absolute;
+        color: $maincolor;
         top: 50%;
         transform: translateY(-50%);
         @include adaptiv-value('padding', 15, 12, 1);
@@ -378,10 +379,10 @@ section {
         font-size: 24px;
         z-index: 1;
         &__prev{
-            left: 20px;
+            @include adaptiv-value('left', 20, 10, 1);
         }
         &__next{
-            right: 20px;
+            @include adaptiv-value('right', 20, 10, 1);
         }
         &.swiper-button-disabled{
             background: rgba(255, 255, 255, 0.3);
@@ -673,6 +674,9 @@ textarea{
         @include adaptiv-value('font-size', 25, 22, 1);
         @include adaptiv-value('top', 30, 20, 1);
         @include adaptiv-value('right', 30, 20, 1);
+        @media (max-width: $mobile) {
+            top: 50px;
+        }
         color: #fff;
         position: absolute;
         cursor: pointer;

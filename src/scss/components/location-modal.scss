@@ -2,7 +2,7 @@
     &__body{
         @include adaptiv-value('padding-right', 50, 20, 1);
         @include adaptiv-value('padding-left', 50, 20, 1);
-        @include adaptiv-value('padding-top', 120, 60, 1);
+        @include adaptiv-value('padding-top', 120, 80, 1);
         @include adaptiv-value('padding-bottom', 120, 60, 1);
         @include adaptiv-value('gap', 30, 20, 1);
         display: flex;

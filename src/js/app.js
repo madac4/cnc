@@ -15,7 +15,23 @@ if (header) {
 }
 
 if (document.querySelector('.slider-reasons-controls__dots')) {
-    document.querySelector('.slider-reasons-controls__dots').style.top = `${header.offsetHeight -2}px`;
+    const navigation = document.querySelector('.slider-reasons-controls__dots');
+    const itemPos = navigation.offsetTop;
+    document.addEventListener('scroll', () =>{
+        const viewportWidth = window.innerWidth;
+        const scrollPos = window.scrollY;
+        if (viewportWidth < 767) {
+            if (scrollPos >= itemPos - header.offsetHeight - 10) {
+                navigation.style.top = `${header.offsetHeight -2}px`;
+                navigation.style.position = `fixed`;
+                document.querySelector('.slider-reasons__body').style.marginTop = `${header.offsetHeight}px`
+            }else{
+                navigation.style.top = `initial`;
+                navigation.style.position = `relative`;
+                document.querySelector('.slider-reasons__body').style.marginTop = `0px`
+            }
+        }
+    })
 }
 
 // let sliderTemplate = new Swiper('.slider', {
@@ -236,7 +252,7 @@ if (document.querySelector('.slider-reasons__body')) {
             clickable: true,
             renderBullet: function (index, className) {
                 return '<h2 class="' + className + ' big">' + (slideTitles[index]) + "</h2>";
-              },
+            },
         },
     });
 }
